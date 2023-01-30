@@ -1,0 +1,32 @@
+$hover-color: #801f56;
+$background-color: #dcdcdc;
+$box-shadow-color: grey;
+$display-property: flex;
+$font-color-primary: #000;
+$font-color-secondary: #919191;
+$color-primary: rgb(255, 255, 255);
+
+
+/**MEDIA QUERY - SCREEN SIZES*/
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 480px;
+$mobile-medium: 425px;
+$mobile-small: 320px;
+
+@mixin flex-conditions{
+    display: flex;
+    align-items: center;
+}
+
+@mixin mobile-view {
+    font-size: 13px;
+    gap: 5px;
+}
+
+@mixin button-style{
+    cursor: pointer;
+    &:hover{
+        color: $hover-color;
+    }
+}

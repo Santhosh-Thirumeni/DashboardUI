@@ -1,0 +1,59 @@
+@import "./variables.scss";
+.audio-attachment-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    .audio-preview-container{
+        @include flex-conditions;
+        flex-direction: column;
+    }
+    .audio-options-container{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        cursor: pointer;
+        .start-recording:hover{
+            color: $hover-color;
+        }
+        .stop-recording:hover{
+            color: $hover-color;
+        }
+        
+    }
+    audio{
+        width: 210px;
+    }
+}
+.say-it-container{
+    @include flex-conditions;
+    gap: 10px;
+    cursor: pointer;
+    &:hover{
+        color: $hover-color;
+
+    }
+}
+@media screen and (max-width: $laptop) {
+    .audio-attachment-container{
+        audio{
+            width: 180px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: $mobile) {
+    .say-it-container{
+        @include mobile-view
+        
+    }
+    
+}
+@media screen and (max-width: $mobile-small) {
+    .say-it-container{
+        font-size: 12px;
+    }
+    
+}

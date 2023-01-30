@@ -1,0 +1,46 @@
+@import "./variables.scss";
+.navlink{
+    text-decoration: none;
+    color: black;
+
+.menu-options-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 45px;
+    .icon-content-container{
+        display: flex;
+        gap: 25px;
+    }
+    .icon{
+        width: 25px;
+    }
+    .no-of-contents{
+        color: #767575;
+    }
+    
+   
+
+&:hover{
+    background-color: $hover-color;
+    color: white;
+    cursor: pointer;
+    
+}
+
+&:hover .no-of-contents{
+    background-color: $hover-color;
+    color: white;
+    cursor: pointer;
+}
+}
+}
+@media screen and (max-width: $laptop) {
+    .menu-options-container{
+        padding: 8px 12px 8px 30px;
+        .icon-content-container{
+            gap: 18px
+        }
+    }
+    
+}
+

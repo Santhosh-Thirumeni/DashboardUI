@@ -1,0 +1,88 @@
+@import "./variables.scss";
+.side-bar{
+    position: fixed;
+    left: 0;
+    padding-top: 90px;
+    overflow-y: auto;
+    height: 100%;
+    width: 25%;
+    background-color: $color-primary;
+
+
+    .user-profile-container{
+        font-size: 18px;
+        @include flex-conditions;
+        margin-left: 10px;
+    }
+    .user-image-container{
+        width: 15%;
+    }
+    .user-name-container{
+        font-weight: 600;
+    }
+    img{
+        width: 50%;
+        margin: 10px 11px 10px 20px;
+    }
+    .total-menu-options-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: $laptop) {
+    .side-bar{
+        font-size: 15px;
+        .user-name-container{
+            font-size: 17px;
+        }
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .side-bar{
+        width: 29%;
+        padding-top: 80px;
+        width: 29%;
+        img{
+            margin-left: 15px;
+        }
+    .user-profile-container{
+        margin-left: 0;
+    }
+    .user-image-container{
+        width: 15%;
+    }
+    .user-name-container{
+        font-size: 16px;
+    }
+    
+    .menu-options-container{
+        padding-left: 18px;
+        .icon-content-container{
+            font-size: 15px;
+        }
+    }
+
+}
+    
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .side-bar{
+        transform: translateX(300px);
+        transition: 0.5s;
+        right: 0;
+        left: auto;
+        width: 60%;
+        z-index: 10;
+    }
+
+    .display.side-bar{
+        transform: translateX(0);
+        transition: 0.5s;
+    }
+    
+}

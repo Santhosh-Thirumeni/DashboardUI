@@ -1,0 +1,46 @@
+@import "./variables.scss";
+.add-attachment-container{
+    @include flex-conditions;
+    gap: 10px;
+    .attachment-input-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .attachment-input{
+        cursor: pointer;
+        &:hover{
+            color: $hover-color;
+        }
+    }
+    .attachment-icon{
+        margin-right: 8px;
+    }
+    .file-input{
+        display: none;
+    }
+    .preview-container{
+        display: flex;
+        gap: 10px;     
+    }
+    .preview-image{
+        width: 60px;
+    }
+    .preview-discard-icon{
+        cursor: pointer;
+        &:hover{
+            color: $hover-color;
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .add-attachment-container{
+        @include mobile-view
+    }
+    
+}
+@media screen and (max-width: $mobile-small) {
+    .add-attachment-container{
+        font-size: 12px;
+    }
+    
+}

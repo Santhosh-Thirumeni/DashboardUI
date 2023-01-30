@@ -1,0 +1,106 @@
+@import "./variables.scss";
+.modal-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200, 0.5);
+    position: fixed;
+    @include flex-conditions;
+    justify-content: center;
+    font-family: 'Tahoma';
+   
+
+  
+  .modal-container {
+    width: 30%;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 2px 11px $box-shadow-color;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: absolute;
+  }
+  
+  .modal-container .title {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+  }
+  
+  .close-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-button button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  // .modal-container .body {
+  //   flex: 50%;
+  //   @include flex-conditions;
+  //   justify-content: center;
+  //   font-size: 27px;
+  //   text-align: center;
+  // }
+  
+  .modal-container .modal-button-container {
+    flex: 20%;
+    @include flex-conditions;
+    justify-content: center;
+  }
+  
+  .modal-container .modal-button-container button {
+    width: 140px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: $hover-color;
+    color: white;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  #cancel-button {
+    border: 3px solid $hover-color;
+    color: $hover-color;
+    background-color: white;
+  }
+  
+}
+@media screen and (max-width: $tablet) {
+  .modal-background{
+    .modal-container{
+      width: 50%;
+      .modal-button-container button{
+        width: 130px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width: $mobile){
+    .modal-background{
+        font-size: 14px;
+        .modal-container{
+            width: 90%;
+            .title{
+              font-size: 15px;
+            }
+            .modal-button-container button{
+              width: 120px;
+              height: 40px;
+              font-size: 14px;
+            }
+        }
+        
+    }
+    
+  }

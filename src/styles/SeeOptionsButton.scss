@@ -1,0 +1,45 @@
+@import "./variables.scss";
+.see-options-button-container{
+    @include flex-conditions;
+    justify-content: center;
+    margin: 20px 20px 20px 45px;
+    background-color: $background-color;
+    border-radius: 6px;
+    gap: 10px;
+    &:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+    &:hover .see-options-button{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+ 
+}
+
+.see-options-button{
+    font-family: "Tahoma";
+    font-size: 15px;
+    border: none;
+    background-color: $background-color;
+    height: 40px;
+
+}
+@media screen and (max-width: $laptop) {
+    .see-options-button-container{
+        margin-left: 30px;
+        margin-right: 12px;
+        .see-options-button{
+            height: 35px;
+        }
+    }
+    
+}
+@media screen and (max-width: $tablet) {
+    .see-options-button-container{
+        margin-left: 22px;
+    }
+    
+}

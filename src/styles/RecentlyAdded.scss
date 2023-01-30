@@ -1,0 +1,15 @@
+@import "./variables.scss";
+.heading-recently-added{
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: $tablet) {
+    .heading-recently-added{
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    
+}

@@ -1,0 +1,38 @@
+@import "./variables.scss";
+.webcam-container{
+    display: flex;
+    .capture-image,.retake-icon{
+        @include button-style;
+        margin: 5px;
+    }
+    .capture-or-close-container{
+        @include button-style;
+        margin-left: 5px;
+
+    }
+    .camera-icon{
+        margin-right: 5px;
+    }
+    .webcam-img{
+        @include flex-conditions;
+        flex-direction: column;
+        box-shadow: 3px 3px 3px 3px $box-shadow-color;
+        border-radius: 10px;
+    }
+    
+    
+}
+
+@media screen and (max-width: $mobile) {
+    .webcam-container{
+        @include mobile-view;
+        
+    }
+    
+}
+@media screen and (max-width: $mobile-small) {
+    .webcam-container{
+        font-size: 12px;
+    }
+    
+}

@@ -1,0 +1,73 @@
+@import "./variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-fix{
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    top: 0;
+
+header{
+    position: relative;
+    padding: 30px;
+    @include flex-conditions;
+    justify-content: space-between;
+    color: $font-color-primary;
+    border-bottom: 2px solid #cecdcd;
+    box-shadow: 0px 2px 15px $font-color-secondary;
+    background-color: $color-primary;
+    z-index: 5;
+    height: 70px;
+}
+    div{
+        margin-left: 10px;
+        font-weight: 500;
+    }
+    .dashboard{
+        color: $font-color-secondary;
+    }
+    .icon-left-arrow{
+        margin-right: 30px;
+        width: 20px;
+        height: auto;
+    }
+    .icon-greater-than{
+        margin-left: 10px;
+        width: 10px;
+    }
+    .header-left-container{
+        @include flex-conditions;
+    }
+    .menu-button{
+        display: none;
+    }
+
+   
+}
+@media screen and (max-width: $tablet) {
+    .header-fix header{
+        padding: 25px 30px;
+    }
+    
+}
+
+@media screen and (max-width: $mobile) {
+    .header-fix{
+    .menu-button{
+        display: block;
+    }
+    header{
+        padding: 20px 25px;
+        font-size: 14px;
+    }
+    
+}
+}
+
+
+
+
